@@ -29,8 +29,7 @@ def stock_picker(stonks)
     stonks.each_with_index do |price, index|
       if price > min_price && (price - min_price) > profit && index > ref_index
         profit = price - min_price
-        profit_days[0] = ref_index
-        profit_days[1] = index
+        profit_days = [ref_index, index]
       end
     end
   end
